@@ -3,7 +3,7 @@ import {Link, Redirect} from "react-router-dom";
 import {useForm} from "react-hook-form";
 import AuthService from "../services/auth.service";
 
-export default function SignUp() {
+export default function SignUp(props) {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
 
     let currentUser = AuthService.getCurrentUser();
@@ -18,7 +18,7 @@ export default function SignUp() {
             () => {
                 AuthService.login(values.email, values.password).then(
                     () => {
-                        window.location.reload();
+                        props.setIsOnline(true);
                     },
                     (error) => {
 

@@ -44,7 +44,7 @@ export default function  App() {
             renders the first one that matches the current URL. */}
                 <Switch>
                     <Route path="/signup">
-                        <SignUp />
+                        <SignUp setIsOnline={setIsOnline} />
                     </Route>
                     <Route path="/signin">
                         <SignIn setIsOnline={setIsOnline} />

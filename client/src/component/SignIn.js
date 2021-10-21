@@ -4,7 +4,7 @@ import {useForm} from "react-hook-form";
 import AuthService from "../services/auth.service";
 
 export default function SignIn(props) {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
     let currentUser = AuthService.getCurrentUser();
     if (currentUser) {
