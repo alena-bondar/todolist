@@ -1,0 +1,20 @@
+{
+  "name": "bondar-todolist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install": "npm --prefix client install && npm --prefix server install",
+    "start": "npm --prefix client run build && npm --prefix server start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alena-bondar/todolist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alena-bondar/todolist/issues"
+  },
+  "homepage": "https://github.com/alena-bondar/todolist#readme"
+}

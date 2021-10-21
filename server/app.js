@@ -7,6 +7,7 @@ const taskRoute = require('./routes/task.routes');
 const app = express();
 
 // parse requests of content-type - application/json
+app.use(express.static('../client/build'));
 app.use(bodyParser.json());
 app.use(function(req, res, next) {
     res.header(
